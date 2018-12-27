@@ -1,0 +1,35 @@
+<?php
+namespace Payment;
+//银行转账
+class offline{
+	public function __construct(){
+		
+	}
+	public function Config(){
+		$conf = [
+			"code" => basename(__FILE__, '.php'),
+			"desc" => 'bank_desc',
+			"name" => '银行转账',
+			"is_online" => 0,	//在线支付
+			"support" => 0,		//支付方式 1.微信  2.支付宝
+			"config" => [
+				['name' => 'bank_name','text' => '银行名称','type' => 'text','value' => ''],
+				['name' => 'bank_addr','text' => '网点支行','type' => 'text','value' => ''],
+				['name' => 'account_name','text' => '收款人姓名','type' => 'text','value' => ''],
+				['name' => 'account_number','text' => '收款人卡号','type' => 'text','value' => '']
+			]
+		];
+		return $conf;
+	}
+	
+	//线下支付
+	public function Offlinepay($amount,$uid,$payConf){
+		$cateid = 2;
+		$ordersn = model('Paylog')->AddOrder($uid,$amount,'',$cateid);
+		if(!$ordersn) return false;
+		$url = "/detailsRecharge?ordersn=".$ordersn."&payway=2";
+		return $url;
+	}
+	
+}
+?>

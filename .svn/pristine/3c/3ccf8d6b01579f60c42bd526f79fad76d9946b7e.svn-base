@@ -1,0 +1,24 @@
+<?php
+namespace Payment;
+class wxtocard{
+	public function __construct(){
+		
+	}
+	//微信支付
+	public function wxpay($amount,$uid,$payConf){
+		$cateid = 2;
+		$ordersn = model('Paylog')->AddOrder($uid,$amount,'微信',$cateid);
+		if(!$ordersn) return false;
+		$url = "/detailsRecharge?ordersn=".$ordersn."&payway=2";
+		return $url;
+	}
+
+    /**
+     * 处理函数
+     */
+    function response()
+    {
+        return;
+    }
+}
+?>

@@ -1,0 +1,34 @@
+<?php
+namespace Payment;
+//支付宝转账到银行卡
+class alitocard{
+	public function __construct(){
+		
+	}
+	public function Config(){
+		$conf = [
+			"code" => basename(__FILE__, '.php'),
+			"desc" => '备注：转账成功后,联系客户入金。',
+			"name" => '支付宝转账到银行卡',
+			"is_online" => 1,
+			"support" => 2,
+			"config" => [
+				['name' => 'bank_name','text' => '银行名称','type' => 'text','value' => ''],
+				['name' => 'bank_addr','text' => '网点支行','type' => 'text','value' => ''],
+				['name' => 'account_name','text' => '收款人姓名','type' => 'text','value' => ''],
+				['name' => 'account_number','text' => '收款人卡号','type' => 'text','value' => '']
+			]
+		];
+		return $conf;
+	}
+	
+	//微信支付
+	public function alipay($amount,$uid,$payConf){
+		$cateid = 2;
+		$ordersn = model('Paylog')->AddOrder($uid,$amount,'支付宝',$cateid);
+		if(!$ordersn) return false;
+		$url = "/detailsRecharge?ordersn=".$ordersn."&payway=2";
+		return $url;
+	}
+}
+?>

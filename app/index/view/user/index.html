@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户信息</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="__LAYUIS__/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="__LAYUIS__/style/admin.css" media="all">
+    <link rel="stylesheet" href="__LAYUIS__/style/base.css">
+    <script src="__LAYUI__/jquery.min.js"></script>
+    <script src="__LAYUI__/base.js"></script>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">用户信息</div>
+                <div class="layui-card-body" pad15>
+                    <div class="layui-tab">
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <form class="layui-form" id="form1">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">账号名称：</label>
+                                        <div class="layui-input-block heig">
+                                            {$user['kauser']}
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">会员类型：</label>
+                                        <div class="layui-input-block heig">
+                                            <select name="type">
+                                                {if condition="is_array($user_type)"}
+                                                    {foreach name="$user_type" id="t"}
+                                                        <option value="{$t}" selected>{$t}盘</option>
+                                                    {/foreach}
+                                                {/if}
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">总信用额：</label>
+                                        <div class="layui-input-block heig">
+                                            {$user['cs']}元
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">可用余额：</label>
+                                        <div class="layui-input-block heig">
+                                            {$user['ts']}元
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">下注总额：</label>
+                                        <div class="layui-input-block heig">
+                                            {:getKitheSum()}元
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">当前期数：</label>
+                                        <div class="layui-input-block heig">
+                                            {:getKitheNum()}期
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">状态：</label>
+                                        <div class="layui-input-block heig">
+                                            {if condition="$user['stat'] eq 1"}
+                                                当前用户已关闭
+                                            {else/}
+                                            <img src="__IMAGES__/icon_21x21_selectboxon.gif" alt="">
+                                            {/if}
+                                        </div>
+                                    </div>
+                                    <!--<div class="layui-form-item">-->
+                                        <!--<div class="layui-input-block">-->
+                                            <!--<button type="submit" class="layui-btn"  lay-submit lay-filter="save">保存</button>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="__LAYUIS__/layui/layui.js"></script>
+<script>
+    $('.heig').css('line-height',$('.heig').height()+'px');
+    //layui
+   layui.use(['form','element'],function(){
+        var form=layui.form;
+
+   });
+
+</script>
+</html>

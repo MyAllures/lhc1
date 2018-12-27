@@ -1,0 +1,204 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\www\PHPTutorial\WWW\lhc/app/index\view\bets\kbb.html";i:1544491385;}*/ ?>
+<html>
+<head>
+    <title>半波</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/file/lhc_images/xp.css" type="text/css">
+    <script src="/file/lhc_images/jquery.min.js"></script>
+</head>
+<body>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <table>
+        <tr>
+            <td height="2"></td>
+        </tr>
+    </table>
+    <table width="100%"   border="1" cellpadding="2" cellspacing="1" bordercolor="#CCCCCC" bordercolordark="#f9f9f9" bgcolor="#FFFFFF">
+        <form target="_self" name="lt_form"  method="post" action="<?php echo url('kbbSubmit',['class2'=>$ids]); ?>">
+        <tr>
+            <td height="28" colspan="4" align="center" nowrap="nowrap">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="27%"><font color=ff0000 size="3"><b><?php echo $ids; ?></b></font>&nbsp;&nbsp;&nbsp;<span><font color="black">封盘时间：<?php echo getKithe(14); ?></font></span>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">下注金额:<span id="allgold">0</span></font></td> <td width="18%" align="right" ><span class="STYLE1"><font color="000000">封盘倒计时:<b id="time"></b></font></span></td>
+                        <td width="25%" ><font color="#FF0000"><strong><span id="span_dt_dt"></span></strong></font>
+                            </td>
+                        <td ><font color=ffffff></font></td>
+                        <td ><div align="right"></div></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr >
+            <td height="27" colspan="15" align="center" background="/file/lhc_images/tm680.gif"><font color="#333333"><b>半&nbsp;&nbsp;&nbsp;波</b></font></td>
+        </tr>
+        <?php if(is_array($res) || $res instanceof \think\Collection || $res instanceof \think\Paginator): if( count($res)==0 ) : echo "" ;else: $i=0; foreach($res as $key=>$r): ++$i; ?>
+        <tr>
+            <td width="41" height="25" align="center"  bgcolor="<?php if(($i-1) < 4): ?>de0000<?php elseif(($i-1) < 8): ?>00a800<?php elseif(($i-1) < 12): ?>0073e0<?php elseif(($i-1) < 14): ?>de0000<?php elseif(($i-1) < 16): ?>00a800<?php elseif(($i-1) < 18): ?>0073e0<?php endif; ?> " ><font color=FFFFFF><?php echo $r['class3']; ?></font></td>
+            <td width="50" height="25" align="center" valign="middle" class="ball_ff"><b><span id="bl<?php echo $r['id']; ?>"> 0 </span><span> </span></b></td>
+            <td width="55" height="25" align="center" bgcolor="#FFFFFF"><input style="HEIGHT: 18px"  class="input1" size="4" name="Num_<?php echo $i-1+1; ?>" sum="<?php echo getTanKitheSum('半波',$ids,$r['class3']); ?>" id="Num_<?php echo $i-1+1; ?>" />
+                <input name="class3_<?php echo $i-1+1; ?>" value="<?php echo $r['class3']; ?>" type="hidden" >
+                <input name="gb<?php echo $i-1+1; ?>" type="hidden"  value="0">
+                <input name="xr_<?php echo $i-1+1; ?>" type="hidden" id="xr_<?php echo $i-1; ?>" value="0" >
+                <input name="xrr_<?php echo $i-1+1; ?>" type="hidden"  value="0" ></td>
+            <td height="25" bgcolor="f1f1f1"  >
+                <table align=left>
+                    <tr>
+                        <?php if(is_array($r['m_number']) || $r['m_number'] instanceof \think\Collection || $r['m_number'] instanceof \think\Paginator): if( count($r['m_number'])==0 ) : echo "" ;else: foreach($r['m_number'] as $k=>$m): if($m != 49): ?>
+                        <td align=middle   height="25" width="32" class="ball_<?php echo getColor($m); ?>"><img src="/file/lhc_images/num<?php echo $m; ?>.gif" /></td>
+                        <?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+        <tr>
+            <td height="35" colspan="4" align="center"  bgcolor="#FFFFFF">
+                <table border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="88" align="center"><input name="btnSubmit"  type="submit"  style="width:60px" id="btnSubmit" value="送出" /></td>
+                        <td width="88" align="center"><input type="reset" onclick="javascript:document.all.allgold.innerHTML =0;" name="Submit3" value="重设" /></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr><INPUT type=hidden value=0 name="gold_all" id="total_gold">
+    </form>
+</table>
+
+</table>
+
+<script>
+    $(function(){
+        //远程定时获取指定数据
+        function loc(){
+            $.ajax({
+                url:'<?php echo url('server'); ?>',
+                type:'post',
+                returnType:'json',
+                data:{
+                    'class1':'半波',
+                    'class2':'<?php echo $ids; ?>'
+                },
+                success:function(response,status,xhr){
+                    for (var i=0;i<18;i++){
+                        var sbbn=i+1;
+                        if(response[i].locked==1){
+                            $('#bl'+response[i]['id']).html('停');
+                            $('#bl'+response[i]['id']).parent().parent().next().find('input').attr({disabled:true}).css('background','#F1F1F1');
+                        }else{
+                            switch('<?php echo $abcd; ?>'){
+                                case 'A':
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        $('#bl'+response[i]['id']).html('<SPAN STYLE=\'background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;\' ><span style=\'display:inline-block;height:100%;vertical-align:middle;\'></span><font color=ff0000><b>'+response[i]['rate']+'</b></font></span>');
+                                    }else{
+                                        $('#bl'+response[i]['id']).html(response[i]['rate']);
+                                    }
+                                    break;
+                                case 'B':
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-<?php echo getConfigField('bbb')*100; ?>")/100;
+                                        $('#bl'+response[i]['id']).html("<span style='background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;' ><span style='display:inline-block;height:100%;vertical-align:middle;'></span><font color=ff0000><b>"+bs+"</b></font></span>");
+                                    }else{
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-<?php echo getConfigField('bbb')*100; ?>")/100;
+                                        $('#bl'+response[i]['id']).html(bs);
+                                    }
+                                    break;
+                                case 'C':
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-<?php echo getConfigField('cbb')*100; ?>")/100;
+                                        $('#bl'+response[i]['id']).html("<span style='background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;' ><span style='display:inline-block;height:100%;vertical-align:middle;'></span><font color=ff0000><b>"+bs+"</b></font></span>");
+                                    }else{
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-<?php echo getConfigField('cbb')*100; ?>")/100;
+                                        $('#bl'+response[i]['id']).html(bs);
+                                    }
+                                    break;
+                                case 'D':
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-<?php echo getConfigField('dbb')*100; ?>")/100;
+                                        $('#bl'+response[i]['id']).html("<span style='background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;' ><span style='display:inline-block;height:100%;vertical-align:middle;'></span><font color=ff0000><b>"+bs+"</b></font></span>");
+                                    }else{
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-<?php echo getConfigField('dbb')*100; ?>")/100;
+                                        $('#bl'+response[i]['id']).html(bs);
+                                    }
+                                    break;
+                                default:
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        $('#bl'+response[i]['id']).html('<SPAN STYLE=\'background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;\' ><span style=\'display:inline-block;height:100%;vertical-align:middle;\'></span><font color=ff0000><b>'+response[i]['rate']+'</b></font></span>');
+                                    }else{
+                                        $('#bl'+response[i]['id']).html(response[i]['rate']);
+                                    }
+                                    break;
+                            }
+                        }
+
+                    }
+                }
+            });
+            //定时操作
+            setTimeout(loc,<?php echo \think\Config::get('ftime'); ?>);
+        }
+        loc();      //执行
+
+        //表单焦点判断
+        $('.input1').on('blur',function(){
+            var re = /^[0-9]+.?[0-9]*$/;
+            var value=parseFloat($(this).val());
+            var sum=parseFloat($(this).attr('sum'));
+            if(!re.test(value) && $(this).val()!=''){
+                alert('下注金额仅能输入数字');
+                $(this).val('0');
+                value=0;
+            }
+            if($(this).val()==''){
+                value=0;
+            }
+            if ( (value < <?php echo getMemField('xy'); ?>) && (value!='')) {$(this).focus(); alert("下注金额不可小於最低限度:<?php echo getMemField('xy'); ?>!!"); return false;}
+
+            if (parseFloat(sum+value) > <?php echo getQuotaField($xc,'xxx'); ?>) {$(this).focus(); alert("对不起,号止本期下注金额最高限制 : <?php echo getQuotaField($xc,'xxx'); ?>!!"); return false;}
+
+            if (value > <?php echo getQuotaField($xc,'xx'); ?>) {$(this).focus(); alert("对不起,下注金额已超过单注限额 : <?php echo getQuotaField($xc,'xx'); ?>!!"); return false;}
+
+            //下注金额的值
+            var money = getAllInput();
+
+            if (money > <?php echo getMemField('ts'); ?>)   {$(this).focus(); alert("下注金额不可大於可用信用额度!!");    return false;}
+
+            $('#allgold').html(money);
+            $('[name=gold_all]').val( $('#allgold').html());
+        });
+        console.log();
+        //计算所有的input表单的值
+        function getAllInput(){
+            $nums=0;
+            for (var i=1;i<=$('.input1').length;i++){
+                if($('[name=Num_'+i+']').val()!=''){
+                    $nums+=parseFloat($('[name=Num_'+i+']').val());
+                }
+            }
+            return $nums;
+        }
+
+        //表单提交
+        $('form').submit(function(){
+           var sum=parseFloat($('#allgold').html());
+           if(sum<=0){
+               alert('请输入下注金额!!');
+               return false;
+           }
+           $('#btnSubmit').attr('disable','true');
+        });
+        //倒计时
+        var time=parseInt(<?php echo strtotime(getKithe(14))-time(); ?>);
+        function setTime(){
+            $('#time').html(time+'秒');
+            time--;
+            setTimeout(setTime,1000);
+        }
+        setTime();
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="__IMAGES__/xp.css" type="text/css">
+</head>
+<body>
+<script>
+    window.setTimeout("self.location='{:url('bets/sx6',['ids'=>$class2])}'", 30000);
+    function ChkSubmit(){
+        //设定『确定』键为反白
+        document.all.btnSubmit.disabled = true;
+        document.form1.submit();
+    }
+    //keypress 按下出发
+    function CheckKey(event){
+        // if(event.keyCode == 13) return true;
+        // if((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode > 95 || event.keyCode < 106)){alert("下注金额仅能输入数字!!"); return false;}
+    }
+
+    //表单确认时触发
+    function SubChk(){
+        if(document.all.gold.value==''){
+            document.all.gold.focus();
+            alert("请输入下注金额!!");
+            return false;
+        }
+        if(isNaN(document.all.gold.value) == true){
+            document.all.gold.focus();
+            alert("下注金额仅能输入数字!!");
+            return false;
+        }
+        if(eval(document.all.gold.value) < {:getMemField('xy')}){
+            document.all.gold.focus();
+            alert("下注金额不可小於最低下注金额:{:getMemField('xy')}!!");
+            return false;
+        }
+        if(eval(document.all.gold.value) > {$xxx}){
+            document.all.gold.focus();
+            alert("对不起,本期有下注金额最高限制 : {$xxx}  !!");
+            return false;
+        }
+        if(eval(document.all.gold.value) > {$xx}){
+            document.all.gold.focus();
+            alert("下注金额不可大於单注限额:{$xx}!!");
+            return false;
+        }
+        if(({$sum}+eval(document.all.gold.value)) >{$xxx}){
+            document.all.gold.focus();
+            alert("本期累计下注共: {$sum}\n下注金额已超过单期限额!!");
+            return false;
+        }
+        if(eval(document.all.gold.value) > {:getMemField('ts')}){
+            document.all.gold.focus();
+            alert("下注金额不可大於信用额度:{:getMemField('ts')}!!");
+            return false;
+        }
+
+//if(!confirm("可蠃金额:"+Math.round(document.all.gold.value * document.all.ioradio.value / 1000 - document.all.gold.value)+"\n\n 是否确定下注?")){return false;}
+        document.all.btnCancel.disabled = true;
+        document.all.btnSubmit.disabled = true;
+        document.LAYOUTFORM.submit();
+    }
+
+    //keyUp 触发
+    function CountWinGold(){
+        if(document.all.gold.value==''){
+            document.all.gold.focus();
+            alert('未输入下注金额!!!');
+        }else{
+            //document.all.ioradio.value /1000  赔率  重新计算可赢的金额
+            document.all.pc.innerHTML=Math.round(document.all.gold.value * document.all.ioradio.value /1000 - document.all.gold.value);
+//document.all.pc1.innerHTML=Math.round(document.all.gold.value * document.all.ioradio1.value);
+            count_win=true;
+        }
+    }
+    function CountWinGold1(){
+        if(document.all.gold.value==''){
+            document.all.gold.focus();
+            alert('未输入下注金额!!!');
+        }else{
+//document.all.pc1.innerHTML=Math.round(document.all.gold.value * document.all.ioradio1.value);
+            count_win=true;
+        }
+    }
+</script>
+<table width="80%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#FDF4CA">
+                <tr>
+                    <td height="25" colspan="2" align="center" bgcolor="#006600" class="tbtitle">确认下注</td>
+                </tr>
+                <tr>
+                    <td width="35%" height="25" align="right" bgcolor="#006600" class="tbtitle">账号名称</td>
+                    <td width="65%" bgcolor="#FFFFFF">
+                        <span class="STYLE2">{:getMemField('kauser')}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="25" align="right" bgcolor="#006600" class="tbtitle">会员类型 </td>
+                    <td bgcolor="#FFFFFF">
+                        <span class="STYLE2">{:getMemField('abcd')}盘</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="25" align="right" bgcolor="#006600" class="tbtitle">总信用额</td>
+                    <td bgcolor="#FFFFFF">
+                        <span class="STYLE2">￥{:getMemField('cs')}元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="25" align="right" bgcolor="#006600" class="tbtitle">可用余额</td>
+                    <td bgcolor="#FFFFFF">
+                        <span class="STYLE2">￥{:getMemField('ts')}元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="25" align="right" bgcolor="#006600" class="tbtitle">最低限额</td>
+                    <td bgcolor="#FFFFFF">
+                        <span class="STYLE2">￥{:getMemField('xy')}元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="25" align="right" bgcolor="#006600" class="tbtitle">下注总额</td>
+                    <td bgcolor="#FFFFFF">
+                        <span class="STYLE2">￥{:getTanKitheSum()}元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="25" align="right" bgcolor="#006600" class="tbtitle">当前期数</td>
+                    <td bgcolor="#FFFFFF">
+                        <span class="STYLE2">{:getKitheNum()}期</span>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td height="3"></td>
+                </tr>
+            </table>
+            <table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#FDF4CA">
+                <form action="{:url('savesx6',['class2'=>$class2])}" method="post" name="LAYOUTFORM" id="form1"  onsubmit="return false">
+                    <input name="min_bl" id="min_bl" type="hidden" value="{$min_bl}" />
+
+                    <tr>
+                        <td width="35%" height="25" bgcolor="#ffffff" style="LINE-HEIGHT: 22px">{$class2}</FONT> @ <strong>
+                            <font color="#ff0000">{$min_bl}</font></strong>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#F9F7D7"><div align="center"><b>{$number1}</b></div></td>
+                    </tr>
+                    <tr>
+                        <td height="25" bgcolor="#ffffff" style="LINE-HEIGHT: 23px">&nbsp;下注金额:
+                            <input name="gold" class="input1" id="gold" onkeypress="return CheckKey(event)"
+                                   onkeyup="return CountWinGold()" value="{$Num_1}" size="8" maxlength="8" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="25" bgcolor="#ffffff" style="LINE-HEIGHT: 23px">&nbsp;可蠃金额:<strong><font id="pc" color="#ff0000">
+                            {$Num_1*$min_bl-$Num_1}
+                        </font></strong></td>
+                    </tr>
+                    <tr>
+                        <td height="25" bgcolor="#ffffff">&nbsp;单注限额: {$xx}</td>
+                    </tr>
+                    <tr>
+                        <td height="25" bgcolor="#ffffff">&nbsp;单号限额: {$xxx}</td>
+                    </tr>
+                    <tr>
+                        <td height="30" align="center" bgcolor="#ffffff" style="LINE-HEIGHT: 23px"><input type='hidden' name="rate_id" value='{$rate_id}' />
+
+                            <input onClick="self.location='{:url('bets/sx6')}';" type="button" value="放弃" name="btnCancel" />
+                            &nbsp;&nbsp;
+                            <input style="width:60px" type="submit" value="确定" onclick="SubChk();" name="btnSubmit" />
+                        </td>
+                    </tr>
+                    <input type="hidden" value="SP11" name="concede" />
+                    <input type="hidden" value='{$ratex*1000}' name="ioradio" />
+                    <input type="hidden" value='?' name="ioradio1" />
+                    <input type="hidden" value='{$number1}' name="number1" />
+                </form>
+                <script language="JavaScript" type="text/javascript">document.all.gold.focus();</script>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td height="3"></td>
+                </tr>
+            </table></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<?php
+namespace Net;
+
+class CurlHttp implements HttpInterFace{
+	private $curl;
+	private $cookie;
+	private $data;
+	private $error;
+	private $errno;
+	private $method;
+	private $referer;
+	private $header;
+	private $postData;
+	private $httpStatus;
+	private $httpStatusMsg;
+	public function __construct(){
+		$this->curl = null;
+		$this->cookie = "";
+		$this->data = "";
+		$this->error ="";
+		$this->errno = 0;
+		$this->method = "GET";
+		$this->referer = "";
+		$this->header = "";
+		$this->postData = array();
+		$this->httpStatus = 0;
+		$this->httpStatusMsg = '';
+		$this->setUserAgent();
+		$this->proxyIp = "";
+		$this->proxyPort = "";
+		$this->headArr[] = 'Expect:';
+	}
+	
+	
+	public function get($url, $referer = "", $limit = "", $timeout = "", $block = ""){
+		$this->method = "GET";
+		return $this->request($url,$referer);
+	}
+	
+	
+	public function post($url, $postData, $referer = "", $limit = "", $timeout = "", $block = ""){
+		$this->method = "POST";
+		$this->postData = $postData;
+		return $this->request($url,$referer);
+	}
+	
+	
+	public function request($url, $referer = ""){
+		if($this->curl == null) $this->curl = curl_init();
+		$purl = parse_url($url);
+		curl_setopt($this->curl, CURLOPT_URL, $url);
+		if($this->method == "POST"){
+			curl_setopt($this->curl, CURLOPT_POST, 1);
+			curl_setopt($this->curl, CURLOPT_POSTFIELDS, $this->postData);
+			
+		}
+		if($referer) curl_setopt($this->curl,CURLOPT_REFERER,$referer);
+		if ($this->cookie) curl_setopt($this->curl, CURLOPT_COOKIE, $this->cookie);
+	    curl_setopt($this->curl, CURLOPT_HEADER, 1);
+	    curl_setopt($this->curl, CURLOPT_RETURNTRANSFER,1);
+	    curl_setopt($this->curl, CURLOPT_CONNECTTIMEOUT, 3);
+		curl_setopt($this->curl, CURLOPT_TIMEOUT, 10);
+		curl_setopt($this->curl, CURLOPT_USERAGENT,$this->agent);  
+		if($purl["scheme"] == "https"){
+			curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, false);
+    		curl_setopt($this->curl, CURLOPT_SSL_VERIFYHOST, false);
+			//curl_setopt($this->curl, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1);
+		}
+		
+		if($this->proxyPort && $this->proxyIp){
+			curl_setopt($this->curl, CURLOPT_PROXYAUTH, CURLAUTH_BASIC); 
+			curl_setopt($this->curl, CURLOPT_HTTPPROXYTUNNEL, true);    
+			curl_setopt($this->curl, CURLOPT_PROXY, $this->proxyIp);  
+			curl_setopt($this->curl, CURLOPT_PROXYPORT, $this->proxyPort);  
+			curl_setopt($this->curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP); //使用http代理模式
+		}
+		
+		if($this->headArr) curl_setopt($this->curl, CURLOPT_HTTPHEADER, $this->headArr);
+		$data = curl_exec($this->curl);
+	    $this->error = curl_error($this->curl);
+		$this->errno = curl_errno($this->curl);
+		if($this->errno == 0){
+			$info = curl_getinfo($this->curl);
+			$header_size = $info["header_size"];
+			$this->header = substr($data, 0, $header_size);
+			//$infos = preg_split('/\r\n/', $this->header, 0, PREG_SPLIT_NO_EMPTY);
+			$this->data = substr($data, $header_size);
+			$this->is_ok();
+			return true;
+		}
+		return false;
+	}
+	
+	public function setUserAgent($agent = ""){
+		if($agent) $this->agent = $agent;
+		else if(isset($_SERVER['HTTP_USER_AGENT'])) $this->agent = $_SERVER['HTTP_USER_AGENT'];
+		else  $this->agent = 'Mozilla/5.0+(compatible;+Baiduspider/2.0;++http://www.baidu.com/search/spider.html)';
+	}
+	
+	
+	public function get_data(){
+		return $this->data;
+	}
+	
+	public function get_header(){
+		return $this->header;
+	}
+	
+	public function errmsg(){
+		return $this->error;
+	}
+
+	public function errno(){
+		return $this->errno;
+	}	
+	
+	public function get_cookie() {
+		$cookies = array();
+		if(preg_match_all("|Set-Cookie: ([^;]*);|is", $this->header, $m)) {
+			foreach($m[1] as $c) {
+				list($k, $v) = explode('=', $c,2);
+				$cookies[$k] = $v;
+			}
+		}
+        return $cookies;
+	}
+	
+	public function set_cookie($name, $value) {
+		$this->cookie .= "$name=$value;";
+	}
+	
+	public function clearCookie(){
+		$this->cookie = '';
+	}
+	
+	public function setcookies($cookies){
+		$this->cookie = $cookies;
+	}
+	
+	public function close(){
+		if(is_resource($this->curl)) curl_close($this->curl);
+		$this->curl = null;
+	}
+	
+	public function __destruct(){
+		$this->close();
+	}
+	
+	public function is_ok() {
+		$status = $this->get_status();
+		$this->httpStatus = $status[0];
+		$this->httpStatusMsg = $status[1];
+	}
+	
+	public function get_status() {
+		preg_match("|^HTTP/\d\.\d ([0-9]{3}) (.*)|", $this->header, $m);
+		return array($m[1], $m[2]);
+	}
+	
+	public function setProxy($ip,$port = "80"){
+		$this->proxyIp = $ip;
+		$this->proxyPort =  $port;
+	}
+	
+	public function getHttpStatus(){
+		return $this->httpStatus;
+	}
+	
+	public function getHttpStatusMsg(){
+		return $this->httpStatusMsg;
+	}	
+	
+	public function  setHeader($header){
+		$this->headArr[] = $header;
+	}
+	
+	public function clearHeader(){
+		$this->headArr = [];
+	}
+}
+?>

@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="__IMAGES__/xp.css" type="text/css">
+    <script src="__IMAGES__/jquery.min.js"></script>
+</head>
+<body>
+<table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <form action="{:url('saveKbb',['class2'=>$class2])}" method="post" name="form1" id="form1" >
+        <tr>
+            <td width="80%">&nbsp;</td>
+        </tr>
+        <tr>
+            <td height="30" align="center">
+                <table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bordercolor="#691A0D" bgcolor="#cccccc">
+                    <tr>
+                        <td height="25" colspan="4" align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="line-height: 23px"><span class="style3">确认注单</span></td>
+                    </tr>
+                    <tr>
+                        <td height="22" align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="line-height: 23px"><span class="style3">内容</span></td>
+                        <td align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="line-height: 23px"><span class="style3">赔率</span></td>
+                        <td align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="line-height: 23px"><span class="style3">下注金额</span></td>
+                        <td align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="line-height: 23px"><span class="style3">可赢金额</span></td>
+                    </tr>
+
+                    {for start="1" end="$numm"}
+                     <input name="Num_{$i}" type="hidden" value="{$res[$i]['num']}" />
+                    {if condition="$res[$i]['num'] neq  ''"}
+                    <tr>
+                        <td align="center" height="22" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px"><font color="#ff0000">{$res[$i]['class2']}：<font color=ff6600>{$res[$i]['class3']}</font></font></td>
+                        <td align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px">
+                            {$res[$i]['rate']}
+                        </td>
+                        <td align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px">{$res[$i]['num']}</td>
+                        <td align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px">{$res[$i]['num']*$res[$i]['rate']-$res[$i]['num']}</td>
+                    </tr>
+                    {/if}
+                    {/for}
+                    <tr>
+                        <td height="28" colspan="2" align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px">下注总额</td>
+                        <td height="28" align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px">{$total}</td>
+                        <td height="28" align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px"></td>
+                    </tr>
+                    <tr>
+                        <td height="28" colspan="4" align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px"><input onClick="self.location='{:url('kbb')}';" type="button" value="取消" name="btnCancel" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input  style="width:60px"  type="submit" value="送出" onClick="return ChkSubmit();" name="btnSubmit" /></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>

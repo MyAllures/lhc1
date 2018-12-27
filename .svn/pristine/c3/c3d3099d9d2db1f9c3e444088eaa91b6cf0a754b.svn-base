@@ -1,0 +1,263 @@
+<?php
+namespace Util;
+class Information {
+	 //系统判断语言
+	private $language;
+	private $agent;
+	public	function __construct(){
+		$this->language = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? trim($_SERVER['HTTP_ACCEPT_LANGUAGE']) : "";
+		$this->agent = isset($_SERVER['HTTP_USER_AGENT']) ? trim($_SERVER['HTTP_USER_AGENT']) : "";
+	}
+ 
+ 
+public function get_client_language(){
+	if(!$this->language){
+		return "unknow";
+	}
+	$lang = substr($this->language,0,4);
+	if (preg_match("/zh-c/i",$lang)){
+	   $oslang = "简体中文";
+	}
+	elseif (preg_match("/zh/i",$lang)){
+	   $oslang = "繁體中文";
+	}
+	elseif (preg_match("/en/i",$lang)){
+	   $oslang = "English";
+	}
+	elseif (preg_match("/fr/i",$lang)){
+	   $oslang = "French";
+	}
+	elseif (preg_match("/de/i",$lang)){
+	   $oslang = "German";
+	}
+	elseif (preg_match("/jp/i",$lang)){
+	   $oslang = "Japanese";
+	}
+	elseif (preg_match("/ko/i",$lang)){
+	   $oslang = "Korean";
+	}
+	elseif (preg_match("/es/i",$lang)){
+	   $oslang = "Spanish";
+	}
+	elseif (preg_match("/sv/i",$lang)){
+	   $oslang = "Swedish";
+	}
+	else{
+	   $oslang = "Other";
+	}
+	return $oslang ;
+}
+
+ //判断当前IP
+ public function get_client_ip()
+ {
+ 	if(getenv('HTTP_CLIENT_IP') && strcasecmp(getenv('HTTP_CLIENT_IP'), 'unknown')) {
+		$ip = getenv('HTTP_CLIENT_IP');
+	} elseif(getenv('HTTP_X_FORWARDED_FOR') && strcasecmp(getenv('HTTP_X_FORWARDED_FOR'), 'unknown')) {
+		$ip = getenv('HTTP_X_FORWARDED_FOR');
+	} elseif(getenv('REMOTE_ADDR') && strcasecmp(getenv('REMOTE_ADDR'), 'unknown')) {
+		$ip = getenv('REMOTE_ADDR');
+	} elseif(isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], 'unknown')) {
+		$ip = $_SERVER['REMOTE_ADDR'];
+	}
+	return preg_match ( '/[\d\.]{7,15}/', $ip, $matches ) ? $matches [0] : '';
+ }
+
+ //判断当前操作系统
+ public function get_client_os()
+ {
+	if(!$this->agent){
+		return "unknowOs";
+	}
+    $agent = strtolower($this->agent);
+    $os    = '';
+    if (strpos($agent, 'win') !== false)
+    {
+        if (strpos($agent, 'nt 5.1') !== false)
+        {
+            $os = 'Windows XP';
+        }
+        elseif (strpos($agent, 'nt 5.2') !== false)
+        {
+            $os = 'Windows 2003';
+        }
+        elseif (strpos($agent, 'nt 5.0') !== false)
+        {
+            $os = 'Windows 2000';
+        }
+        elseif (strpos($agent, 'nt 6.0') !== false)
+        {
+            $os = 'Windows Vista';
+        }
+		elseif (strpos($agent, 'nt 6.1') !== false)
+        {
+            $os = 'Windows 7';
+        }
+		elseif (strpos($agent, 'nt 6.2') !== false)
+        {
+            $os = 'Windows 8';
+        }
+		elseif (strpos($agent, 'nt 6.3') !== false)
+        {
+            $os = 'Windows 8.1';
+        }
+		elseif (strpos($agent, 'nt 10.0') !== false)
+        {
+            $os = 'Windows 10';
+        }			
+        elseif (strpos($agent, 'nt') !== false)
+        {
+            $os = 'Windows NT';
+        }
+        elseif (strpos($agent, 'win 9x') !== false && strpos($agent, '4.90') !== false)
+        {
+            $os = 'Windows ME';
+        }
+        elseif (strpos($agent, '98') !== false)
+        {
+            $os = 'Windows 98';
+        }
+        elseif (strpos($agent, '95') !== false)
+        {
+            $os = 'Windows 95';
+        }
+        elseif (strpos($agent, '32') !== false)
+        {
+            $os = 'Windows 32';
+        }
+        elseif (strpos($agent, 'ce') !== false)
+        {
+            $os = 'Windows CE';
+        }
+    }
+	elseif(strpos($agent,"iphone")!==false)
+	{
+		$os="iPhone";
+	}
+	else if(strpos($agent,"android")!==false)
+	{
+		$os="Android";
+	}
+	else if(strpos($agent,"windows phone")!==false)
+	{
+		$os="Windows Phone";
+	}
+	else if(strpos($agent,"nokia")!==false)
+	{
+		$os="Nokia";
+	}
+	else if(strpos($agent,"symbos")!==false)
+	{
+		$os="SymbOS";
+	}
+    elseif (strpos($agent, 'linux') !== false)
+    {
+        $os = 'Linux';
+    }
+    elseif (strpos($agent, 'unix') !== false)
+    {
+        $os = 'Unix';
+    }
+    elseif (strpos($agent, 'sun') !== false && strpos($agent, 'os') !== false)
+    {
+        $os = 'SunOS';
+    }
+    elseif (strpos($agent, 'ibm') !== false && strpos($agent, 'os') !== false)
+    {
+        $os = 'IBM OS/2';
+    }
+    elseif (strpos($agent, 'mac') !== false && strpos($agent, 'pc') !== false)
+    {
+        $os = 'Macintosh';
+    }
+    elseif (strpos($agent, 'powerpc') !== false)
+    {
+        $os = 'PowerPC';
+    }
+    elseif (strpos($agent, 'aix') !== false)
+    {
+        $os = 'AIX';
+    }
+    elseif (strpos($agent, 'hpux') !== false)
+    {
+        $os = 'HPUX';
+    }
+    elseif (strpos($agent, 'netbsd') !== false)
+    {
+        $os = 'NetBSD';
+    }
+    elseif (strpos($agent, 'bsd') !== false)
+    {
+        $os = 'BSD';
+    }
+    elseif (strpos($agent, 'osf1') !== false)
+    {
+        $os = 'OSF1';
+    }
+    elseif (strpos($agent, 'irix') !== false)
+    {
+        $os = 'IRIX';
+    }
+    elseif (strpos($agent, 'freebsd') !== false)
+    {
+        $os = 'FreeBSD';
+    }
+    elseif (strpos($agent, 'teleport') !== false)
+    {
+        $os = 'teleport';
+    }
+    elseif (strpos($agent, 'flashget') !== false)
+    {
+        $os = 'flashget';
+    }
+    elseif (strpos($agent, 'webzip') !== false)
+    {
+        $os = 'webzip';
+    }
+    elseif (strpos($agent, 'offline') !== false)
+    {
+        $os = 'offline';
+    }
+    else
+    {
+        $os = 'Unknown';
+    }
+    return $os;
+ }
+
+ //判断当前浏览器类型
+ function get_client_browser()
+ {
+  if(!$this->agent){
+	return "unknow";
+  }
+  if (preg_match('/MSIE\s+([0-9\.]+);/is',$this->agent,$matched))
+  {
+   $browser = "Internet Explorer $matched[1]";
+  }
+  elseif (preg_match('/Firefox\/([0-9\.]+)/is',$this->agent,$matched))
+  {
+   $browser = "Firefox $matched[1]";
+  }
+  elseif (strpos($this->agent,"Chrome"))
+  {
+   $browser = "Google Chrome";
+  }
+  elseif (strpos($this->agent,"Safari"))
+  {
+   $browser = "Safari";
+  }
+  elseif (strpos($this->agent,"Opera"))
+  {
+   $browser = "Opera";
+  }
+  elseif (strpos($this->agent,'Trident/7.0') && strpos($this->agent,'like Gecko')){
+	$browser = "Internet Explorer 11";
+  }
+  else
+  {
+   $browser = "unknow";
+  }
+  return $browser;
+ }
+}

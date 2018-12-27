@@ -1,0 +1,1774 @@
+---------------------------------------------------------------
+[ 2018-12-01T17:14:10+08:00 ] 0.0.0.0 GET /admin/login/index.html
+[ info ] localhost:94/admin/login/index.html [运行时间：0.062400s][吞吐率：16.03req/s] [内存消耗：1,857.50kb] [文件加载：48]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Login.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:14:19+08:00 ] 0.0.0.0 POST /admin/login/login.html
+[ info ] localhost:94/admin/login/login.html [运行时间：1.154402s][吞吐率：0.87req/s] [内存消耗：2,486.92kb] [文件加载：56]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '41',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4',
+)
+[ info ] [ PARAM ] array (
+  'username' => '212558',
+  'password' => '12346',
+  'remember' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029602s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.031200s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'[E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-12-01T17:14:29+08:00 ] 0.0.0.0 POST /admin/login/login.html
+[ info ] localhost:94/admin/login/login.html [运行时间：1.124202s][吞吐率：0.89req/s] [内存消耗：2,486.80kb] [文件加载：56]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '30',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4',
+)
+[ info ] [ PARAM ] array (
+  'username' => '212558',
+  'password' => '12346',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.030602s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.015600s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'[E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-12-01T17:18:22+08:00 ] 0.0.0.0 GET /admin/login/index.html
+[ info ] localhost:94/admin/login/index.html [运行时间：0.109201s][吞吐率：9.16req/s] [内存消耗：1,714.98kb] [文件加载：46]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Login.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:18:29+08:00 ] 0.0.0.0 POST /admin/login/login.html
+[ info ] localhost:94/admin/login/login.html [运行时间：1.248002s][吞吐率：0.80req/s] [内存消耗：2,865.61kb] [文件加载：56]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '42',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4',
+)
+[ info ] [ PARAM ] array (
+  'username' => '212558',
+  'password' => '123456',
+  'remember' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045202s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.093600s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558'  AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_admin`  SET `LastLogin`='2018-12-01 17:18;29',`LastLoginIP`='0.0.0.0'  WHERE  `id` = 91 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_admin`  SET `look`=`look`+1  WHERE  `id` = 91 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:18:30+08:00 ] 0.0.0.0 GET /admin/index/index.html
+[ info ] localhost:94/admin/index/index.html [运行时间：1.216803s][吞吐率：0.82req/s] [内存消耗：2,623.12kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/login/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045201s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:18:31+08:00 ] 0.0.0.0 GET /admin/home/console.html
+[ info ] localhost:94/admin/home/console.html [运行时间：0.156000s][吞吐率：6.41req/s] [内存消耗：1,740.03kb] [文件加载：45]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'home',
+    2 => 'console',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Home->console[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Home.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\home\console.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:18:31+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：1,348.22kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:18:32+08:00 ] 0.0.0.0 GET /file/admin/layuis/lib/mem.js
+[ info ] localhost:94/file/admin/layuis/lib/mem.js [运行时间：0.046800s][吞吐率：21.37req/s] [内存消耗：1,348.76kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'file',
+    1 => 'admin',
+    2 => 'layuis',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+  'lib' => 'mem.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:18:32+08:00 ] 0.0.0.0 GET /file/admin/layuis/lib/mem.js
+[ info ] localhost:94/file/admin/layuis/lib/mem.js [运行时间：0.062400s][吞吐率：16.03req/s] [内存消耗：1,348.76kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'file',
+    1 => 'admin',
+    2 => 'layuis',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/home/console.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+  'lib' => 'mem.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:21:10+08:00 ] 0.0.0.0 GET /admin/index/index.html
+[ info ] localhost:94/admin/index/index.html [运行时间：2.371205s][吞吐率：0.42req/s] [内存消耗：2,469.66kb] [文件加载：52]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.825203s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.031201s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:21:11+08:00 ] 0.0.0.0 GET /admin/home/console.html
+[ info ] localhost:94/admin/home/console.html [运行时间：0.078001s][吞吐率：12.82req/s] [内存消耗：1,597.02kb] [文件加载：43]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'home',
+    2 => 'console',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Home->console[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Home.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\home\console.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:21:11+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.171600s][吞吐率：5.83req/s] [内存消耗：1,348.22kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:21:16+08:00 ] 0.0.0.0 GET /admin/admin/changepass.html
+[ info ] localhost:94/admin/admin/changepass.html [运行时间：1.388402s][吞吐率：0.72req/s] [内存消耗：2,624.45kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'changepass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->changePass[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Admin.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\admin\change_pass.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.216802s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `id` = 91 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:21:45+08:00 ] 0.0.0.0 GET /admin/login/logout.html
+[ info ] localhost:94/admin/login/logout.html [运行时间：1.138802s][吞吐率：0.88req/s] [内存消耗：2,522.10kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Login->logout[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045201s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:21:45+08:00 ] 0.0.0.0 GET /admin/login/index.html
+[ info ] localhost:94/admin/login/index.html [运行时间：0.046800s][吞吐率：21.37req/s] [内存消耗：1,715.36kb] [文件加载：46]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Login.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:21:54+08:00 ] 0.0.0.0 POST /admin/login/login.html
+[ info ] localhost:94/admin/login/login.html [运行时间：1.138802s][吞吐率：0.88req/s] [内存消耗：2,865.59kb] [文件加载：56]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '42',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4',
+)
+[ info ] [ PARAM ] array (
+  'username' => '212558',
+  'password' => '123456',
+  'remember' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029602s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558'  AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_admin`  SET `LastLogin`='2018-12-01 17:21;54',`LastLoginIP`='0.0.0.0'  WHERE  `id` = 91 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_admin`  SET `look`=`look`+1  WHERE  `id` = 91 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:21:55+08:00 ] 0.0.0.0 GET /admin/index/index.html
+[ info ] localhost:94/admin/index/index.html [运行时间：1.170002s][吞吐率：0.85req/s] [内存消耗：2,469.65kb] [文件加载：52]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/login/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\index\index.html [ array (
+  0 => 'admin',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.060802s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:21:55+08:00 ] 0.0.0.0 GET /admin/home/console.html
+[ info ] localhost:94/admin/home/console.html [运行时间：0.046800s][吞吐率：21.37req/s] [内存消耗：1,597.02kb] [文件加载：43]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'home',
+    2 => 'console',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Home->console[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Home.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\home\console.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:21:55+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.062400s][吞吐率：16.03req/s] [内存消耗：1,348.22kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:21:56+08:00 ] 0.0.0.0 GET /index.php
+[ info ] localhost:94/index.php [运行时间：1.154403s][吞吐率：0.87req/s] [内存消耗：2,622.67kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'accept-encoding' => 'compress,gzip',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014001s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:21:58+08:00 ] 0.0.0.0 GET /admin/admin/changepass.html
+[ info ] localhost:94/admin/admin/changepass.html [运行时间：1.138802s][吞吐率：0.88req/s] [内存消耗：2,481.02kb] [文件加载：52]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'changepass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Admin->changePass[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\Admin.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\admin\change_pass.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029601s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `id` = 91 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:22:00+08:00 ] 0.0.0.0 GET /admin/user/index.html
+[ info ] localhost:94/admin/user/index.html [运行时间：1.170002s][吞吐率：0.85req/s] [内存消耗：2,652.31kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/index/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/admin\view\user\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045202s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:22:01+08:00 ] 0.0.0.0 GET /admin/user/getjson.html?page=1&limit=10&act=ajax
+[ info ] localhost:94/admin/user/getjson.html?page=1&limit=10&act=ajax [运行时间：1.201203s][吞吐率：0.83req/s] [内存消耗：2,494.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'getjson',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/admin/user/index.html',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'cookie' => 'ECSCP[admin_id]=1; ECSCP[admin_pass]=8c3d4dc45f49a75c6d346f3fd2e9af27; Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+  'act' => 'ajax',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->getJson[ E:\myphp_www\PHPTutorial\WWW\lhc\app\admin\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029601s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_admin` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_admin` WHERE  `username` = '212558' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'liuhecai.ka_user' doesn't exist[E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2018-12-01T17:22:06+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:94/ [运行时间：1.154402s][吞吐率：0.87req/s] [内存消耗：2,582.80kb] [文件加载：55]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014002s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: lhc_index[E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Common.php:14]
+---------------------------------------------------------------
+[ 2018-12-01T17:22:06+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.046800s][吞吐率：21.37req/s] [内存消耗：1,348.22kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:22:56+08:00 ] 0.0.0.0 GET /index/login/logout
+[ info ] localhost:94/index/login/logout [运行时间：1.264602s][吞吐率：0.79req/s] [内存消耗：2,588.57kb] [文件加载：55]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.046202s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: lhc_index[E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Common.php:14]
+---------------------------------------------------------------
+[ 2018-12-01T17:22:57+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.031200s][吞吐率：32.05req/s] [内存消耗：1,348.22kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:23:27+08:00 ] 0.0.0.0 GET /index/login/logout
+[ info ] localhost:94/index/login/logout [运行时间：1.170002s][吞吐率：0.85req/s] [内存消耗：2,588.90kb] [文件加载：55]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029602s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: lhc_index[E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Common.php:14]
+---------------------------------------------------------------
+[ 2018-12-01T17:23:27+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.031201s][吞吐率：32.05req/s] [内存消耗：1,348.59kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:23:49+08:00 ] 0.0.0.0 GET /index/login/logout
+[ info ] localhost:94/index/login/logout [运行时间：1.185602s][吞吐率：0.84req/s] [内存消耗：2,705.31kb] [文件加载：57]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; lhc_index=%250A; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Login->logout[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029602s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_mem`  SET `zlogin`='2018-12-01 17:23;49',`zip`='0.0.0.0'  WHERE  `id` = 322 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_mem`  SET `look`=`look`+1  WHERE  `id` = 322 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:23:50+08:00 ] 0.0.0.0 GET /index/login/index.html
+[ info ] localhost:94/index/login/index.html [运行时间：1.185602s][吞吐率：0.84req/s] [内存消耗：2,757.70kb] [文件加载：55]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Login->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045202s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:23:56+08:00 ] 0.0.0.0 GET /index/login/index.html
+[ info ] localhost:94/index/login/index.html [运行时间：1.232402s][吞吐率：0.81req/s] [内存消耗：2,615.41kb] [文件加载：53]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Login->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.092002s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:18+08:00 ] 0.0.0.0 GET /index/login/index.html
+[ info ] localhost:94/index/login/index.html [运行时间：1.138802s][吞吐率：0.88req/s] [内存消耗：2,615.87kb] [文件加载：53]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Login->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014002s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:27+08:00 ] 0.0.0.0 POST /index/login/login.html
+[ info ] localhost:94/index/login/login.html [运行时间：1.248002s][吞吐率：0.80req/s] [内存消耗：2,959.35kb] [文件加载：56]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/index/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '37',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+  'username' => '2',
+  'password' => '000000',
+  'remember' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045202s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ka_mem` WHERE  `kauser` = '2' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `kapassword` = '670b14728ad9902aecba32e22fa4f6bd' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_mem`  SET `zlogin`='2018-12-01 17:24;27',`zip`='0.0.0.0'  WHERE  `id` = 322 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_mem`  SET `look`=`look`+1  WHERE  `id` = 322 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:28+08:00 ] 0.0.0.0 GET /index/look/index.html
+[ info ] localhost:94/index/look/index.html [运行时间：1.248003s][吞吐率：0.80req/s] [内存消耗：2,750.13kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'look',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/index/login/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Look->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Look.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\look\index.html [ array (
+  0 => 'webname',
+  1 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.060802s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:28+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.046800s][吞吐率：21.37req/s] [内存消耗：1,348.22kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:24:33+08:00 ] 0.0.0.0 GET /index/login/logout.html
+[ info ] localhost:94/index/login/logout.html [运行时间：1.185602s][吞吐率：0.84req/s] [内存消耗：2,626.29kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/index/look/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Login->logout[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029602s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:34+08:00 ] 0.0.0.0 GET /index/login/index.html
+[ info ] localhost:94/index/login/index.html [运行时间：1.154402s][吞吐率：0.87req/s] [内存消耗：2,615.85kb] [文件加载：53]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/index/look/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Login->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045202s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:38+08:00 ] 0.0.0.0 GET /index/login/index.html
+[ info ] localhost:94/index/login/index.html [运行时间：1.138802s][吞吐率：0.88req/s] [内存消耗：2,616.06kb] [文件加载：53]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/index/look/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Login->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029602s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:44+08:00 ] 0.0.0.0 POST /index/login/login.html
+[ info ] localhost:94/index/login/login.html [运行时间：1.216802s][吞吐率：0.82req/s] [内存消耗：2,959.35kb] [文件加载：56]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/index/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '37',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501',
+)
+[ info ] [ PARAM ] array (
+  'username' => '2',
+  'password' => '000000',
+  'remember' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Login->login[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Login.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029602s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `id` FROM `ka_mem` WHERE  `kauser` = '2' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `kapassword` = '670b14728ad9902aecba32e22fa4f6bd' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_mem`  SET `zlogin`='2018-12-01 17:24;44',`zip`='0.0.0.0'  WHERE  `id` = 322 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `ka_mem`  SET `look`=`look`+1  WHERE  `id` = 322 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:45+08:00 ] 0.0.0.0 GET /index/look/index.html
+[ info ] localhost:94/index/look/index.html [运行时间：1.216802s][吞吐率：0.82req/s] [内存消耗：2,608.62kb] [文件加载：52]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'look',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/index/login/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Look->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Look.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\look\index.html [ array (
+  0 => 'webname',
+  1 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045202s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.015600s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:46+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.046800s][吞吐率：21.37req/s] [内存消耗：1,348.22kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:24:49+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:94/ [运行时间：1.263602s][吞吐率：0.79req/s] [内存消耗：2,754.77kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/index/look/index.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\index\index.html [ array (
+  0 => 'webname',
+  1 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.060802s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-01T17:24:49+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:94/favicon.ico [运行时间：0.031201s][吞吐率：32.05req/s] [内存消耗：1,348.22kb] [文件加载：37]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:24:49+08:00 ] 0.0.0.0 GET /index/home/console.html
+[ info ] localhost:94/index/home/console.html [运行时间：0.078001s][吞吐率：12.82req/s] [内存消耗：1,739.92kb] [文件加载：45]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'console',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Home->console[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Home.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\home\console.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T17:46:32+08:00 ] 0.0.0.0 GET /index/mem/changepass.html
+[ info ] localhost:94/index/mem/changepass.html [运行时间：1.887604s][吞吐率：0.53req/s] [内存消耗：2,722.10kb] [文件加载：54]
+[ info ] [ LANG ] E:\myphp_www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'mem',
+    2 => 'changepass',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:94',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost:94/',
+  'connection' => 'keep-alive',
+  'cookie' => 'Phpstorm-cd979afe=343b0f75-48d8-4b9b-95e6-8f7a1bc8d3b4; LiveWSPCX61982668=a354999c33c64b739b5a73228ebd8ef6; NPCX61982668fistvisitetime=1540457600930; NPCX61982668lastvisitetime=1542598680926; NPCX61982668visitecounts=2; NPCX61982668visitepages=2; ECS_ID=0b03472713b244833256288e7fb71ca48e6df44c; ECS[history]=24; ECSCP_ID=441c9f7a86329c85d72ea87cc8b309cd59237259; PHPSESSID=m1jn4h1g23ks3vjkud6ke7sfp4; lhc=%250A%2503%250A%2505%2504%2501; lhc_index=%250A',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Mem->changePass[ E:\myphp_www\PHPTutorial\WWW\lhc\app\index\controller\Mem.php ]
+[ info ] [ VIEW ] E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\mem\change_pass.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.045202s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '2'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000000s ]

@@ -1,0 +1,37 @@
+<?php
+namespace Util;
+class Form {
+	public static function select($array = array(),$val = '',$default_option = '',$name="",$extendStr='class="form-control"',$key='',$valKey='')
+	{
+		$val = trim($val);
+		$string = "<select name=\"$name\" $extendStr>\r\n";
+		if($default_option){
+			$string .= '<option value=""';
+			if(trim($val)==''){
+				$string .= " selected ";
+			}
+			$string .= ">$default_option</option>\r\n";
+		}
+		if($array){
+			if($key&&$valKey){
+				foreach($array as $k=>$v){
+					$string .= "<option value=\"{$v[$key]}\"";
+					if($val!=''&&trim($v[$key]) == $val){
+						$string .=" selected";
+					}
+					$string .= ">{$v[$valKey]}</option>\r\n";
+				}
+			} else {
+				foreach($array as $k=>$v){
+					$string .= "<option value=\"$k\"";
+					if($val!=''&&trim($k) == $val){
+						$string .=" selected";
+					}
+					$string .= ">$v</option>\r\n";
+				}
+		    }
+		}
+		$string .="</select>";
+		return $string;
+	}
+}

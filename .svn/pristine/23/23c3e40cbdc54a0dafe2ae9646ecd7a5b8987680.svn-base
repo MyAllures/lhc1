@@ -1,0 +1,20 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"E:\myphp_www\PHPTutorial\WWW\lhc/app/index\view\look\index.html";i:1543651939;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用条款</title>
+    <link rel="stylesheet" href="/file/lhc_images/main.css">
+</head>
+<body>
+    <div class="bannertop">
+        <h2><?php echo $webname; ?>使用条款</h2>
+    </div>
+    <?php echo $content; ?>
+    <div id="bottomNav">
+        <input name="submit" type="submit" class="wobu" value="我不同意" onclick="javascript:location.href='<?php echo url('login/logout'); ?>'" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="submit2" type="submit"  class="wobu" value="我同意" onclick="javascript:location.href='/'" />
+    </div>
+</body>
+</html>

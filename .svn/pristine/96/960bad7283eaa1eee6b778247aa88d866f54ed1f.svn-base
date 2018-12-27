@@ -1,0 +1,204 @@
+<html>
+<head>
+    <title>五行</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="__IMAGES__/xp.css" type="text/css">
+    <script src="__IMAGES__/jquery.min.js"></script>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td height="2"></td>
+    </tr>
+</table>
+<table width="100%"   border="1" cellpadding="2" cellspacing="1" bordercolor="#CCCCCC" bordercolordark="#f9f9f9" bgcolor="#FFFFFF">
+    <form target="_self" name="lt_form"  method="post" action="{:url('bets/kbbSubmit',['class2'=>$ids])}">
+        <tr>
+            <td height="28" colspan="4" align="center" nowrap="nowrap">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="27%"><font color=ff0000 size="3"><b>{$ids}</b></font>&nbsp;&nbsp;&nbsp;&nbsp;<span><font color="black">封盘时间：{:getKithe(14)}</font></span>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">下注金额:<span id="allgold">0</span></font></td> <td width="18%" align="right" ><span class="STYLE1"><font color=000000>封盘倒计时:<b id="time"></b></font></span></td>
+                        <td width="25%" ><font color="#FF0000"><strong><span id="span_dt_dt"></span></strong></font></font></td>
+                        <td ><div align="right"></div></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr >
+            <td height="27" colspan="15" align="center" background="__IMAGES__/tm680.gif"><font color="#333333"><b>五&nbsp;&nbsp;行</b></font></td>
+        </tr>
+
+        {for start="1" end="6"}
+        <tr>
+            <td width="41" height="35" align="center"  bgcolor="#FDF4CA" class="tbtitle">{$res[$i]['title']}</td>
+            <td width="50" height="25" align="center" valign="middle" class="ball_ff"><b><span id=bl{$res[$i]['id']}> 0 </span><span> </span></b></td>
+            <td width="55" height="25" align="center" bgcolor="#FFFFFF"><input style="HEIGHT: 18px"  class="input1" size="4" name="Num_{$i}" />
+                <input name="class3_{$i}" value="1" type="hidden" >
+                <input name="gb{$i}" type="hidden"  value="0">
+                <input name="xr_{$i-1}" type="hidden" id="xr_{$i-1}" value="0" >
+                <input name="xrr_{$i}" type="hidden" id="xrr_{$i}" value="0" ></td>
+            <td height="25" bgcolor="f1f1f1"  >
+                <table align=left>
+                    <tr>
+                        {foreach name="res[$i]['m_number']" id="m"}
+                        <td align=middle   height="32" width="32" class="ball_{:getColor($m,false)}"><img src="__IMAGES__/num{$m}.gif" /></td>
+                        {/foreach}
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        {/for}
+        <tr>
+            <td height="25" colspan="4" align="center" bgcolor="#FFFFFF">
+                <table border="0" align="center" cellpadding="2" cellspacing="2">
+                    <tr>
+                        <td align="center"><input name="btnSubmit" type="submit"  id="btnSubmit" value="送出" /></td> <td>&nbsp;</td>
+                        <td align="center"><input type="reset"  name="Submit3" value="重设" /></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <INPUT type="hidden"  value=0 name=gold_all id="total_gold">
+    </form>
+</table>
+
+
+<script>
+    $(function(){
+        //远程定时获取指定数据
+        function loc(){
+            $.ajax({
+                url:'{:url("bets/server")}',
+                type:'post',
+                returnType:'json',
+                data:{
+                    'class1':'五行',
+                    'class2':'{$ids}'
+                },
+                success:function(response,status,xhr){
+                    for (var i=0;i<5;i++){
+                        var sbbn=i+1;
+                        if(response[i].locked==1){
+                            $('#bl'+response[i]['id']).html('停');
+                            $('#bl'+response[i]['id']).parent().parent().next().find('input').attr({disabled:true}).css('background','#F1F1F1');
+                        }else{
+                            switch('{$abcd}'){
+                                case 'A':
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        $('#bl'+response[i]['id']).html('<SPAN STYLE=\'background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;\' ><span style=\'display:inline-block;height:100%;vertical-align:middle;\'></span><font color=ff0000><b>'+response[i]['rate']+'</b></font></span>');
+                                    }else{
+                                        $('#bl'+response[i]['id']).html(response[i]['rate']);
+                                    }
+                                    break;
+                                case 'B':
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-{:getConfigField('bbb')*100}")/100;
+                                        $('#bl'+response[i]['id']).html("<span style='background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;' ><span style='display:inline-block;height:100%;vertical-align:middle;'></span><font color=ff0000><b>"+bs+"</b></font></span>");
+                                    }else{
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-{:getConfigField('bbb')*100}")/100;
+                                        $('#bl'+response[i]['id']).html(bs);
+                                    }
+                                    break;
+                                case 'C':
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-{:getConfigField('cbb')*100}")/100;
+                                        $('#bl'+response[i]['id']).html("<span style='background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;' ><span style='display:inline-block;height:100%;vertical-align:middle;'></span><font color=ff0000><b>"+bs+"</b></font></span>");
+                                    }else{
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-{:getConfigField('cbb')*100}")/100;
+                                        $('#bl'+response[i]['id']).html(bs);
+                                    }
+                                    break;
+                                case 'D':
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-{:getConfigField('dbb')*100}")/100;
+                                        $('#bl'+response[i]['id']).html("<span style='background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;' ><span style='display:inline-block;height:100%;vertical-align:middle;'></span><font color=ff0000><b>"+bs+"</b></font></span>");
+                                    }else{
+                                        var bs=eval(Math.round(response[i]['rate']*100)+"-{:getConfigField('dbb')*100}")/100;
+                                        $('#bl'+response[i]['id']).html(bs);
+                                    }
+                                    break;
+                                default:
+                                    if(response[i]['rate']!=response[i]['blrate']){
+                                        $('#bl'+response[i]['id']).html('<SPAN STYLE=\'background-color:ffff00;WIDTH: 100%;height:25px;vertical-align:middle;\' ><span style=\'display:inline-block;height:100%;vertical-align:middle;\'></span><font color=ff0000><b>'+response[i]['rate']+'</b></font></span>');
+                                    }else{
+                                        $('#bl'+response[i]['id']).html(response[i]['rate']);
+                                    }
+                                    break;
+                            }
+                        }
+
+                    }
+                }
+            });
+            //定时操作
+            setTimeout(loc,{$Think.config.ftime});
+        }
+        loc();      //执行
+
+        //表单焦点判断
+        $('.input1').on('blur',function(){
+            var re = /^[0-9]+.?[0-9]*$/;
+            var value=parseFloat($(this).val());
+            var sum=parseFloat($(this).attr('sum'));
+            if(!re.test(value) && $(this).val()!=''){
+                alert('下注金额仅能输入数字');
+                $(this).val('0');
+                value=0;
+            }
+            if($(this).val()==''){
+                value=0;
+            }
+            if ( (value < {:getMemField('xy')}) && (value!='')) {$(this).val('0');$(this).focus(); alert("下注金额不可小於最低限度:{:getMemField('xy')}!!"); return false;}
+            if (parseFloat(sum+value) > {:getQuotaField($xc,'xxx')}) {$(this).val('0'); $(this).focus(); alert("对不起,号止本期下注金额最高限制 : {:getQuotaField($xc,'xxx')}!!"); return false;}
+            if (value > {:getQuotaField($xc,'xx')}) {$(this).val('0');$(this).focus(); alert("对不起,下注金额已超过单注限额 : {:getQuotaField($xc,'xx')}!!"); return false;}
+
+            //下注金额的值
+            var money = getAllInput();
+            if (money > {:getMemField('ts')})   {$(this).val('0');$(this).focus(); alert("下注金额不可大於可用信用额度!!");    return false;}
+
+            $('#allgold').html(money);
+            $('[name=gold_all]').val( $('#allgold').html());
+        });
+        //计算所有的input表单的值
+        function getAllInput(){
+            $nums=0;
+            for (var i=1;i<=$('.input1').length;i++){
+                if($('[name=Num_'+i+']').val()!=''){
+                    $nums+=parseFloat($('[name=Num_'+i+']').val());
+                }
+            }
+            return $nums;
+        }
+
+        //表单提交
+        $('form').submit(function(){
+            var sum=parseFloat($('#allgold').html());
+            if(sum<=0){
+                alert('请输入下注金额!!');
+                return false;
+            }
+            if (sum > {:getMemField('ts')})   {
+                alert("下注金额不可大於可用信用额度!!");
+                return false;
+            }
+            if (sum > {:getQuotaField($xc,'xx')}) {
+                alert("对不起,下注金额已超过单注限额 : {:getQuotaField($xc,'xx')}!!");
+                return false;
+            }
+            $('#btnSubmit').attr('disable','true');
+        });
+
+        //倒计时
+        var time=parseInt({:strtotime(getKithe(14))-time()});
+        function setTime(){
+            $('#time').html(time+'秒');
+            time--;
+            setTimeout(setTime,1000);
+        }
+        setTime();
+    })
+
+</script>
+
+</body>
+</html>

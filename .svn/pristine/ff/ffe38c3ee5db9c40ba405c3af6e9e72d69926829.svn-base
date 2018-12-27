@@ -1,0 +1,13 @@
+<?php
+namespace Net;
+
+interface HttpInterFace {
+	public function post($url, $data, $referer, $limit, $timeout, $block);
+	public function get($url, $referer, $limit, $timeout, $block);
+	public function get_cookie();
+	public function get_data();
+	public function get_header();
+	public function get_status();
+	public function errno();
+	public function errmsg();
+}

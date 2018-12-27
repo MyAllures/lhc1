@@ -1,0 +1,33 @@
+<?php
+namespace Util;
+use Net\CurlHttp;
+class Sms{
+	private $smsid;
+	private $smspwd;
+	private $smspath;
+	private $sms_sign;
+	
+	public function __construct($smsid,$smspwd,$sms_sign){
+		$this->smsid = $smsid;
+		$this->smspwd = $smspwd;
+		$this->smspath = 'http://http.yunsms.cn/tx/';
+		$this->sms_sign = $sms_sign;
+	}
+	
+	//发送短信信息
+	public function sendSms($mobile,$content){
+		$content = '【'.$this->sms_sign.'】' . $content;
+		$postData = array(
+			'uid' => $this->smsid,
+			'pwd' => strtolower(md5($this->smspwd)), 
+			'mobile' => $mobile, 
+			'content' => $content,
+			'encode'=>'utf8'
+		);
+		$http = new CurlHttp();
+		$http->post($this->smspath,$postData,$this->smspath);
+		$body = $http->get_data();
+		if($body == '100')  return true;
+		return false;
+	}
+}

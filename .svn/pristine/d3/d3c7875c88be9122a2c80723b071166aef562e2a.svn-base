@@ -1,0 +1,367 @@
+---------------------------------------------------------------
+[ 2018-12-11T09:32:57+08:00 ] 0.0.0.0 GET /
+[ info ] localhost:84/ [运行时间：1.181980s][吞吐率：0.85req/s] [内存消耗：2,207.23kb] [文件加载：56]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\www\PHPTutorial\WWW\lhc\app\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\PHPTutorial\WWW\lhc/app/index\view\index\index.html [ array (
+  0 => 'webname',
+  1 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.008227s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.028427s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.001267s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.013186s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '3'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000841s ]
+[ sql ] [ SQL ] UPDATE `ka_mem`  SET `zlogin`='2018-12-11 09:32;57',`zip`='0.0.0.0'  WHERE  `id` = 323 [ RunTime:0.000708s ]
+[ sql ] [ SQL ] UPDATE `ka_mem`  SET `look`=`look`+1  WHERE  `id` = 323 [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.001297s ]
+---------------------------------------------------------------
+[ 2018-12-11T09:32:58+08:00 ] 0.0.0.0 GET /index/home/console.html
+[ info ] localhost:84/index/home/console.html [运行时间：0.124896s][吞吐率：8.01req/s] [内存消耗：1,295.98kb] [文件加载：43]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'home',
+    2 => 'console',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'referer' => 'http://localhost:84/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Home->console[ D:\www\PHPTutorial\WWW\lhc\app\index\controller\Home.php ]
+[ info ] [ VIEW ] D:\www\PHPTutorial\WWW\lhc/app/index\view\home\console.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-11T09:32:59+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:84/favicon.ico [运行时间：0.070439s][吞吐率：14.20req/s] [内存消耗：1,097.63kb] [文件加载：37]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-11T09:54:02+08:00 ] 0.0.0.0 GET /index/wx/
+[ info ] localhost:84/index/wx/ [运行时间：1.144023s][吞吐率：0.87req/s] [内存消耗：2,034.85kb] [文件加载：49]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'wx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Wx->index[ D:\www\PHPTutorial\WWW\lhc\app\index\controller\Wx.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.009881s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.016912s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.001195s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000791s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.012858s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '3'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000982s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_kithe` [ RunTime:0.014257s ]
+[ sql ] [ SQL ] SELECT `zfb` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT `kizm6` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_sxnumber` [ RunTime:0.014885s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 25 LIMIT 1 [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 26 LIMIT 1 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 27 LIMIT 1 [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 28 LIMIT 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 29 LIMIT 1 [ RunTime:0.000540s ]
+---------------------------------------------------------------
+[ 2018-12-11T09:54:02+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:84/favicon.ico [运行时间：0.037526s][吞吐率：26.65req/s] [内存消耗：1,097.63kb] [文件加载：37]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-11T09:54:40+08:00 ] 0.0.0.0 GET /index/wx/
+[ info ] localhost:84/index/wx/ [运行时间：1.614237s][吞吐率：0.62req/s] [内存消耗：2,036.63kb] [文件加载：49]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'wx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Wx->index[ D:\www\PHPTutorial\WWW\lhc\app\index\controller\Wx.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014181s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.468456s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.001420s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.001047s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.017906s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '3'  AND `stat` = 0 LIMIT 1 [ RunTime:0.001322s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_kithe` [ RunTime:0.013847s ]
+[ sql ] [ SQL ] SELECT `zfb` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT `kizm6` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_sxnumber` [ RunTime:0.012086s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 25 LIMIT 1 [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 26 LIMIT 1 [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 27 LIMIT 1 [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 28 LIMIT 1 [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 29 LIMIT 1 [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2018-12-11T09:55:42+08:00 ] 0.0.0.0 GET /index/wx/
+[ info ] localhost:84/index/wx/ [运行时间：1.164000s][吞吐率：0.86req/s] [内存消耗：2,035.91kb] [文件加载：49]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'wx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Wx->index[ D:\www\PHPTutorial\WWW\lhc\app\index\controller\Wx.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.022345s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.013777s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.001244s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.013729s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '3'  AND `stat` = 0 LIMIT 1 [ RunTime:0.000848s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_kithe` [ RunTime:0.013341s ]
+[ sql ] [ SQL ] SELECT `zfb` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT `kizm6` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_sxnumber` [ RunTime:0.010369s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 25 LIMIT 1 [ RunTime:0.000820s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 26 LIMIT 1 [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 27 LIMIT 1 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 28 LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 29 LIMIT 1 [ RunTime:0.000513s ]
+---------------------------------------------------------------
+[ 2018-12-11T10:16:11+08:00 ] 0.0.0.0 GET /index/wx/
+[ info ] localhost:84/index/wx/ [运行时间：1.194378s][吞吐率：0.84req/s] [内存消耗：2,277.96kb] [文件加载：58]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'wx',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Wx->index[ D:\www\PHPTutorial\WWW\lhc\app\index\controller\Wx.php ]
+[ info ] [ VIEW ] D:\www\PHPTutorial\WWW\lhc/app/index\view\wx\index.html [ array (
+  0 => 'ids',
+  1 => 'res',
+  2 => 'xc',
+  3 => 'abcd',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.007419s ] mysql:host=localhost;port=3306;dbname=liuhecai;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.030678s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SELECT `id`,`webname`,`weburl`,`tm`,`tmdx`,`tmps`,`zm`,`zmdx`,`ggpz`,`sanimal`,`affice`,`fenb`,`haffice2`,`a1`,`a2`,`a3`,`a10`,`opwww`,`a4`,`a5`,`a6`,`a7`,`a8`,`a9` FROM `config` LIMIT 1 [ RunTime:0.001162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_mem` [ RunTime:0.015716s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_mem` WHERE  `kauser` = '3'  AND `stat` = 0 LIMIT 1 [ RunTime:0.001600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_kithe` [ RunTime:0.016215s ]
+[ sql ] [ SQL ] SELECT `zfb` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT `kizm6` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ka_sxnumber` [ RunTime:0.021850s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 25 LIMIT 1 [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 26 LIMIT 1 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 27 LIMIT 1 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 28 LIMIT 1 [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT * FROM `ka_sxnumber` WHERE  `ID` = 29 LIMIT 1 [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT `abcd` FROM `ka_mem` WHERE  `kauser` = '3' ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT `kizt1` FROM `ka_kithe` WHERE  `na` = 0 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000770s ]
+[ error ] [8]未定义数组索引: m_number[D:\www\PHPTutorial\WWW\lhc\runtime\temp\a7bcd99926f5aedb02e8e6e0e893f131.php:44]
+---------------------------------------------------------------
+[ 2018-12-11T10:16:11+08:00 ] 0.0.0.0 GET /favicon.ico
+[ info ] localhost:84/favicon.ico [运行时间：0.046616s][吞吐率：21.45req/s] [内存消耗：1,097.63kb] [文件加载：37]
+[ info ] [ LANG ] D:\www\PHPTutorial\WWW\lhc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'admin_userid=aLVc197yrjHo; admin_username=NeUI1tz2rzO4MFZ%2F5Q; lhc_index=%250B; lhc=%250A%2503%250A%2505%2504%2501; PHPSESSID=1ct6mtd5rqj9gdf9r8tfivge42',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'host' => 'localhost:84',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

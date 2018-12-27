@@ -1,0 +1,42 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:60:"D:\www\PHPTutorial\WWW\lhc/app/index\view\bets\save_kbb.html";i:1544496034;}*/ ?>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/file/lhc_images/xp.css" type="text/css">
+    <script src="/file/lhc_images/jquery.min.js"></script>
+</head>
+<body>
+<table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="80%"><table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bordercolor="#691A0D" bgcolor="#cccccc">
+            <tr>
+                <td height="28" colspan="3" align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="LINE-HEIGHT: 23px"><span class="STYLE3">下注成功</span></td>
+            </tr>
+            <tr>
+                <td height="22" align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="LINE-HEIGHT: 23px"><span class="STYLE3">内容</span></td>
+                <td align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="LINE-HEIGHT: 23px"><span class="STYLE3">赔率</span></td>
+                <td align="center" bordercolor="#cccccc" bgcolor="#006600" class="tbtitle" style="LINE-HEIGHT: 23px"><span class="STYLE3">下注金额</span></td>
+            </tr>
+            <?php $__FOR_START_29073__=1;$__FOR_END_29073__=$numm;for($i=$__FOR_START_29073__;$i < $__FOR_END_29073__;$i+=1){ if($res[$i]['num'] !=  ''): ?>
+            <tr>
+                <td height="22" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px"><font color="#ff0000"><?php echo $res[$i]['class2']; ?>：<font color=ff6600><?php echo $res[$i]['class3']; ?></font></font></td>
+                <td align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px"><?php echo $res[$i]['rate']; ?></td>
+                <td align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px"><?php echo $res[$i]['num']; ?></td>
+            </tr>
+            <?php endif; } ?>
+            <tr>
+                <td height="22" colspan="3" align="center" bordercolor="#cccccc" bgcolor="ffffff" style="LINE-HEIGHT: 23px"><input  onClick="self.location='<?php echo url('bets/getuserorder'); ?>'" type="button" value="离开" name="btnCancel" />&nbsp;&nbsp;
+                    &nbsp;&nbsp;<input  onClick="self.location='<?php echo url('bets/getuserorder'); ?>'" type="button" value="下注成功" name="btnCancel" /></td>
+            </tr>
+        </td>
+    </tr>
+    <tr>
+        <td height="30" align="center">&nbsp;</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?php
+namespace Payment;
+class payset{
+	public function Config(){
+		$conf = [
+			"alitocard" => [
+				"code" => 'alitocard',
+				"desc" => '备注：转账成功后,联系客户入金。',
+				"name" => '支付宝转账到银行卡',
+				"is_online" => 1,
+				"support" => 2,
+				"config" => [
+					['name' => 'bank_name','text' => '银行名称','type' => 'text','value' => ''],
+					['name' => 'bank_addr','text' => '网点支行','type' => 'text','value' => ''],
+					['name' => 'account_name','text' => '收款人姓名','type' => 'text','value' => ''],
+					['name' => 'account_number','text' => '收款人卡号','type' => 'text','value' => '']
+				]
+			],
+			"wxtocard" =>[
+				"code" => 'wxtocard',
+				"desc" => '备注：转账成功后,联系客户入金。',
+				"name" => '微信转账到银行卡',
+				"is_online" => 1,
+				"support" => 1,
+				"config" => [
+					['name' => 'bank_name','text' => '银行名称','type' => 'text','value' => ''],
+					['name' => 'bank_addr','text' => '网点支行','type' => 'text','value' => ''],
+					['name' => 'account_name','text' => '收款人姓名','type' => 'text','value' => ''],
+					['name' => 'account_number','text' => '收款人卡号','type' => 'text','value' => '']
+				]
+			],
+			"offline" =>[
+				"code" => 'offline',
+				"desc" => 'bank_desc',
+				"name" => '银行转账',
+				"is_online" => 0,
+				"support" => 0,
+				"config" => [
+					['name' => 'bank_name','text' => '银行名称','type' => 'text','value' => ''],
+					['name' => 'bank_addr','text' => '网点支行','type' => 'text','value' => ''],
+					['name' => 'account_name','text' => '收款人姓名','type' => 'text','value' => ''],
+					['name' => 'account_number','text' => '收款人卡号','type' => 'text','value' => '']
+				]
+			]
+		];
+		return $conf;
+	}
+}
+?>
